@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+}
+
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+.center-align{
+    margin: 0 auto;
+    width: 1080px;
+    /* 선택자 */
+}
+
+#header-search a {
+    text-decoration: none;
+}
+
+/* 부모 or 조상 태그에 적용된 css 속성은 자손 태그에 쭉 적용된다. 그래서 Cascading Style Sheet임 */
+#header-search h1{
+    vertical-align: middle;
+    /* 로고랑 검색창 정렬 맞추기*/
+    width: 228px;
+    height: 56px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_dba1af.png);
+    background-position: 0 -161px;
+    background-size: 471px 442px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    /*text-indent: 100%;
+    overflow: hidden;*/ /*밑에 span display none 하면 필요없음. 하지만 접근성을 위해 이런 꼼수를 써야하긴 함*/
+    
+}
+
+#header-search h1 span {
+    display: none;
+}
+
+#header-search h2 {
+
+    /*display: none*/
+    /*실제로는 이 태그 대신 class="blind"적용. 맨 위 참고*/
+    /* display의 기본 설정은 block 으로 되어 있음
+    이 설정을 적용하면 width를 설정해도 마진이 전체 길이만큼 차지하도록 설정되어
+    있기 때문에 여전히 다른 요소가 끼어들 수 없음 */
+    /* 만약 다른 요소를 옆에 넣고 싶으면, display: inline-block 설정해주면 됨 */
+    
+    
+    /*block, inline-block, inline의 차이 
+    1. block -> 한 페이지 너비 전체를 차지. width를 줘도 마진이 생겨서 계속 차지
+    2. inline-block -> 주어진 width, height만큼의 너비를 차지
+    3. inline -> 딱 자기 컨텐츠 만큼의 공간만 차지. span 태그의 경우 기본적으로 이 속성을 지님 */
+}
+
+#header-search fieldset{
+    vertical-align: middle;
+    /* 로고랑 검색창 정렬 맞추기*/
+    margin-left: 20px;
+    /*padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-right: 0px;*/
+    padding: 12px 12px 10px 0px;
+    width: 520px;
+    height: 49px;
+    display: inline-block;
+    border: 2px solid #03cf5d;
+    position: relative;
+    top: 5px;
+}
+
+#header-search fieldset input   {
+    padding: 0;
+    vertical-align: top;
+    border: none;
+    padding: none;
+    outline: none;
+    width: 405px;
+    height: 23px;
+    /* 별다른 설정안해도 기본적으로 css가 적용되어 있음. 이걸 없애주는것이 좋다 
+    개발자 도구에 user agent style sheet가 이걸 뜻함. user agent는 브라우저*/
+}
+
+/* 박스 모델 
+개발자 도구에서 스타일 항목에 네모처럼 나오는 애들
+1. 마진
+2. 보더
+3. 패딩
+4. 컨텐츠 */
+
+#header-search fieldset button {
+    width: 49px;
+    height: 49px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
+
+#search-image {
+    width: 21px;
+    height: 21px;
+    background-image: url(./sp_main_dba1af.png);
+    background-position: -404px 1px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    /*inline이면 컨텐츠 크기만큼 크기가 고정되는데, 컨텐츠가 없으니 0으로 강제 고정*/
+    background-size: 440px 408px;
+    margin: 14px;
+    /* 정렬 맞추기용. 바깥쪽 button의 경계와의 마진을 조절함으로서 한 가운데 놓을 수 있다*/
+
+}
+
+/*
+    포지션
+    1. static
+    2. relative
+        static인 경우 자기자신의 위치를 기준으로 상대적으로 위치를 옮겨줌. 
+        containing block 이 위치 계산할 때 사용된다는데 솔직히 뭔소린지 모르겠음.
+    3. absolute
+        화면을 기준으로 위치를 옮김
+    4.  fixed
+        화면의 지정된 위치에 딱 고정돼있음. 스크롤 내려도 따라옴
+    
+*/
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li span:first-child {
+    height: 16px;
+    display: inline-block;
+    background-image: url(sp_nav.png);
+    background-repeat: no-repeat;
+}
+
+nav li:first-child span:first-child{
+    width: 25px;
+    background-position: 0 -285px;
+}
+
+nav li:nth-child(2) span:first-child{
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child{
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child{
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child{
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child{
+    width: 25px;
+    background-position: -70px -285px;
+}

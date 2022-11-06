@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>img tag</title>
+    </head>
+    <body>
+        <img src="./112278277.2.jpg" width="500">
+        <!-- 현재 스크립트가 위치한 폴더를 기준으로 경로를 구분 -->
+        <!-- width 나 heigth 속성 중 하나만 쓰면 비율을 자동으로 맞춰줌. 둘 다 쓰면
+        비율이 깨지겠지-->
+        <img src="../112278277.2.jpg" alt="위대하신 수령님">
+        <!-- 만약 이미지가 깨졌을 경우 대신 불러오는 대체 텍스트 -->
+        <img src="./112278277.2.jpg" width="10%">
+        <!-- 이렇게 퍼센트로 쓸 수 도 있음-->
+        <br>
+        <br>
+        <!-- 내 컴퓨터에 있다는 점에서 내부 리소스 이용 방식-->
+        <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/03/10/112278277.2.jpg" width="10%">
+        <!-- 외부 서버에 있는 이미지를 사용할 수도 있음(외부 리소스 방식)-->
+        <a href="https://theminjoo.kr" target="blank">
+            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2022/03/10/112278277.2.jpg" width="10%">
+        </a>
+        <!-- 이런 식으로 a태그를 통한 외부링크를 이미지와 연결시킬 수도 있음 -->
+    </body>
+</html>

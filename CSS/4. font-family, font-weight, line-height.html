@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS color & unit</title>
+        <style>
+            h1{font-family:'Times New Roman', Times, serif}
+            /* 폰트 지정. 뒤에 첫번째는 만약 해당 폰트가 없을 경우 대체품 */
+            /* 세번째는? generic font family 라고, 글꼴이 속한 커다란 분류 */
+            p{font-weight:bold}
+            /* 말 그대로 텍스트 굵기 */
+            p{font-weight:lighter}
+            p{font-weight:100}
+            /* 이런 식으로 숫자로 100 ~ 900을 지정할수도 있다 */
+            /* 하지만 해당 폰트에서 지원 안할 수도 있으니 확인해 보아야 한다 */
+            p{font-size:20px;
+                line-height:1.5}
+            /* 줄간격을 조정. 위에서 처럼 font-size의 배수로 지정 가능. 
+               font size가 명시가 안되어있으면 기본값 */
+            p{line-height:20px}
+            /* 직접 입력도 가능 */
+            /* 폰트 사이즈보다 커야함... 폰트 사이즈 + 위아래 여유공간이기 때문에,
+               폰트 사이즈보다 이게 작으면 위 아랫줄 글자가 서로 겹친다 */
+        </style>
+    </head>
+    <body>
+        <h1>css color property</h1>
+        <p>css color unit</p>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+div태그와 p태그, span태그의 차이
+https://dasima.xyz/div-vs-span-vs-p-차이는-블록-요소와-포함-유무/
+
+시멘틱 구조 태그(semantic structure tag)
+div로 레이아웃을 잡는데, 뭐가 뭔지 헷갈리니까 아예 header, nav, section, article, footer등 각자의 역할을
+가지는 태그에 대해 따로 이름을 부여한 레이아웃 구조. 죄다 div 판이 되는걸 막아준다
+물론 구조가 정해져있기 때문에 웹사이트 구조가 정형화되는 단점이 있음
